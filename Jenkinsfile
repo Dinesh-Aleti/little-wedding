@@ -9,7 +9,10 @@ pipeline {
         }
         stage ('copy source code') {
             steps {
-                rsync -a /var/lib/jenkins/workspace/fashion_project/ root@52.91.125.168:/var/www/html/
+                script {
+                    rsync -a /var/lib/jenkins/workspace/fashion_project/ root@52.91.125.168:/var/www/html/
+                }
+                
             }
         }
     }
