@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage ('git-checkout') {
+        stage ('git-checkout-with-webhook') {
             steps {
                 git 'https://github.com/Dinesh-Aleti/little-wedding.git'
             }
