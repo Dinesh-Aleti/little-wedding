@@ -28,7 +28,7 @@ pipeline {
                 '''
             }
         }
-        stage ('build image') {
+        stage ('pushing to dockerhub') {
             agent {
             label 'prod-server'
             }
