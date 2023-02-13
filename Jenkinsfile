@@ -1,9 +1,9 @@
 pipeline {
     agent any
-    environment {
-        withDockerRegistry(credentialsId: 'jenkins-dockerhub-login') {
-}
-    }
+//     environment {
+//         withDockerRegistry(credentialsId: 'jenkins-dockerhub-login') {
+//         }
+//     }
 
     stages {
         stage ('git checkout') {
@@ -40,8 +40,10 @@ pipeline {
                 sh '''
                 cd /var/www/html/
                 docker push dineshaleti/$JOB_NAME:latest
+                '''
                 }
-            }
+            } 
         }
+        
     }
 }
