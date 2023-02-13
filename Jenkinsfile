@@ -41,7 +41,7 @@ pipeline {
                 cd /var/www/html/
                 docker push dineshaleti/$JOB_NAME:latest
                 '''
-                }
+//                 }
             } 
         }
         
