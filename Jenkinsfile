@@ -21,8 +21,7 @@ pipeline {
                 cd /var/www/html/
                 docker build -t $JOB_NAME:v1 .
                 docker tag $JOB_NAME:v1 $JOB_NAME:latest
-                docker stop $JOB_NAME:v1
-                docker run -dit -p 8082:80 --name $JOB_NAME:v1 -v /var/www/html/:/var/www/html --rm $JOB_NAME:v1
+                docker run -dit -p 8082:80 --name $JOB_NAME -v /var/www/html/:/var/www/html --rm $JOB_NAME:v1
                 '''
             }
         }
